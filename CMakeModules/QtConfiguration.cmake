@@ -34,7 +34,7 @@ set(REQUIRED_QT_VERSION "5.7.0")
 set(QTCONFIGROOT ${QTROOT}/lib/cmake/Qt5)
 set(components Core Network WebChannel Qml Quick Xml WebEngine Widgets)
 
-if(UNIX AND (NOT APPLE) AND ((NOT BUILD_TARGET STREQUAL "RPI")))
+if(UNIX AND (NOT APPLE) AND ((NOT BUILD_TARGET STREQUAL "RPI") AND (NOT BUILD_TARGET STREQUAL "ROCKCHIP")))
   add_definitions(-DUSE_X11EXTRAS)
   set(components ${components} X11Extras)
 endif()

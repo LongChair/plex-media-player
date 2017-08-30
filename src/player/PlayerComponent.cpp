@@ -146,7 +146,7 @@ bool PlayerComponent::componentInitialize()
 #endif
 
   // Apply some low-memory settings on RPI, which is relatively memory-constrained.
-#ifdef TARGET_RPI
+#if defined(TARGET_RPI) || defined(TARGET_ROCKCHIP)
   // The backbuffer makes seeking back faster (without having to do a HTTP-level seek)
   mpv::qt::set_property(m_mpv, "cache-backbuffer", 10 * 1024); // KB
   // The demuxer queue is used for the readahead, and also for dealing with badly
@@ -249,6 +249,12 @@ void PlayerComponent::setWindow(QQuickWindow* window)
 #ifdef TARGET_RPI
   window->setFlags(Qt::FramelessWindowHint);
   vo = "rpi";
+#endif
+
+#ifdef TARGET_ROCKCHIP
+  window->setFlags(Qt::FramelessWindowHint);
+  mpv::qt::set_property(m_mpv, "opengl-hwdec-interop", "drmprime-drm");
+  mpv::qt::set_property(m_mpv, "drm-layer", 2);
 #endif
 
   m_window = window;
