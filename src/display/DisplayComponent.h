@@ -27,7 +27,7 @@ public:
   // Switch to the best video mode for the given video framerate. Return true only if the actual
   // mode was switched. If a good match was found, but the current video mode didn't have to be
   // changed, return false. Return false on failure too.
-  bool switchToBestVideoMode(float frameRate);
+  bool switchToBestVideoMode(float frameRate, int width, int height);
 
   // Switch to best overall video mode. This will also switch the resolution.
   bool switchToBestOverallVideoMode(int display);

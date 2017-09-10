@@ -62,21 +62,24 @@ typedef QMap<int, DMDisplayPtr> DMDisplayMap;
 class DMMatchMediaInfo
 {
 public:
-  DMMatchMediaInfo() : m_refreshRate(0), m_interlaced(false) {};
-  DMMatchMediaInfo(float refreshRate, bool interlaced)
-    : m_refreshRate(refreshRate), m_interlaced(interlaced) {};
+  DMMatchMediaInfo() : m_refreshRate(0), m_interlaced(false), m_width(0), m_height(0) {};
+  DMMatchMediaInfo(float refreshRate, bool interlaced, int width, int height)
+    : m_refreshRate(refreshRate), m_interlaced(interlaced), m_width(width), m_height(height) {};
 
   float m_refreshRate;
   bool m_interlaced;
+  int m_width, m_height;
 };
 
 // Matching weights
-#define MATCH_WEIGHT_RES 1000
+#define MATCH_WEIGHT_REFRESH_RATE_EXACT               20000
+#define MATCH_WEIGHT_REFRESH_RATE_MULTIPLE            7500
+#define MATCH_WEIGHT_REFRESH_RATE_CLOSE               5000
+#define MATCH_WEIGHT_REFRESH_RATE_MULTIPLE_CLOSE      2500
 
-#define MATCH_WEIGHT_REFRESH_RATE_EXACT               200
-#define MATCH_WEIGHT_REFRESH_RATE_MULTIPLE            75
-#define MATCH_WEIGHT_REFRESH_RATE_CLOSE               50
-#define MATCH_WEIGHT_REFRESH_RATE_MULTIPLE_CLOSE      25
+#define MATCH_WEIGHT_RES 2000
+
+#define MATCH_WEIGHT_RES_CURRENT 100
 
 #define MATCH_WEIGHT_INTERLACE 10
 

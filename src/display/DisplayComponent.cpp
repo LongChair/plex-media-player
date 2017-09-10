@@ -105,7 +105,7 @@ void DisplayComponent::monitorChange()
 }
 
 //////////////////////////////////////////////////////////////////////////////////////////////////
-bool DisplayComponent::switchToBestVideoMode(float frameRate)
+bool DisplayComponent::switchToBestVideoMode(float frameRate, int width, int height)
 {
   initializeDisplayManager();
 
@@ -128,7 +128,7 @@ bool DisplayComponent::switchToBestVideoMode(float frameRate)
 
   QLOG_DEBUG() << "Current display:" << currentDisplay << "mode:" << currentMode;
 
-  DMMatchMediaInfo matchInfo(frameRate, false);
+  DMMatchMediaInfo matchInfo(frameRate, false, width, height);
   int bestmode = m_displayManager->findBestMatch(currentDisplay, matchInfo);
   if (bestmode >= 0)
   {

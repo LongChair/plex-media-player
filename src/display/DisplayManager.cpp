@@ -136,7 +136,13 @@ int DisplayManager::findBestMatch(int display, DMMatchMediaInfo& matchInfo)
         (candidate->m_height == currentVideoMode->m_height) &&
         (candidate->m_bitsPerPixel == currentVideoMode->m_bitsPerPixel))
     {
-      weights[candidate->m_id]->m_weight += MATCH_WEIGHT_RES;
+      weights[candidate->m_id]->m_weight += MATCH_WEIGHT_RES_CURRENT;
+    }
+
+    if (matchInfo.m_width <= candidate->m_width && matchInfo.m_height <= candidate->m_height)
+    {
+        double surfRatio = (double)(matchInfo.m_width * matchInfo.m_height) / (double)(candidate->m_width * candidate->m_height);
+         weights[candidate->m_id]->m_weight += (surfRatio * MATCH_WEIGHT_RES);
     }
 
     // weight refresh rate
@@ -187,7 +193,7 @@ int DisplayManager::findBestMatch(int display, DMMatchMediaInfo& matchInfo)
     weightit++;
   }
 
-  if ((chosen) && (chosen->m_weight > MATCH_WEIGHT_RES))
+  if ((chosen) && (chosen->m_weight > MATCH_WEIGHT_RES_CURRENT))
   {
     QLOG_INFO() << "DisplayManager RefreshMatch : found a suitable mode : "
                 << chosen->m_mode->getPrettyName();

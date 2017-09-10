@@ -386,7 +386,8 @@ bool PlayerComponent::switchDisplayFrameRate()
   m_restoreDisplayTimer.stop();
 
   DisplayComponent* display = &DisplayComponent::Get();
-  if (!display->switchToBestVideoMode(m_mediaFrameRate))
+  if (!display->switchToBestVideoMode(m_mediaFrameRate, m_serverMediaInfo["width"].toInt(),
+                                      m_serverMediaInfo["height"].toInt()))
   {
     QLOG_DEBUG() << "Switching refresh-rate failed or unnecessary.";
     return false;
