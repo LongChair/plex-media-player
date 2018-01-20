@@ -1,0 +1,163 @@
+Performing C++ SOURCE FILE Test HAVE_FLAG_Wshorten_64_to_32 failed with the following output:
+Change Dir: /home/longchair/github/longchair/LibreELEC.tv/build.PlexMediaPlayer-ROCK64.aarch64-9.0-devel/plexmediaplayer-dist-ninja/.aarch64-libreelec-linux-gnueabi/CMakeFiles/CMakeTmp
+
+Run Build Command:"/home/longchair/github/longchair/LibreELEC.tv/build.PlexMediaPlayer-ROCK64.aarch64-9.0-devel/toolchain/bin/ninja" "cmTC_7b607"
+[1/2] Building CXX object CMakeFiles/cmTC_7b607.dir/src.cxx.o
+FAILED: CMakeFiles/cmTC_7b607.dir/src.cxx.o 
+/home/longchair/github/longchair/LibreELEC.tv/build.PlexMediaPlayer-ROCK64.aarch64-9.0-devel/toolchain/bin/aarch64-libreelec-linux-gnueabi-g++    -march=armv8-a+crc+crypto -mabi=lp64 -Wno-psabi -mcpu=cortex-a53+crc+crypto -fomit-frame-pointer -Wall -pipe -Os -DHAVE_FLAG_Wshorten_64_to_32   -Wshorten-64-to-32 -o CMakeFiles/cmTC_7b607.dir/src.cxx.o -c src.cxx
+aarch64-libreelec-linux-gnueabi-g++-7.2.0: error: unrecognized command line option '-Wshorten-64-to-32'
+ninja: build stopped: subcommand failed.
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test HAVE_FLAG_mmacosx_version_min=10.9 failed with the following output:
+Change Dir: /home/longchair/github/longchair/LibreELEC.tv/build.PlexMediaPlayer-ROCK64.aarch64-9.0-devel/plexmediaplayer-dist-ninja/.aarch64-libreelec-linux-gnueabi/CMakeFiles/CMakeTmp
+
+Run Build Command:"/home/longchair/github/longchair/LibreELEC.tv/build.PlexMediaPlayer-ROCK64.aarch64-9.0-devel/toolchain/bin/ninja" "cmTC_be2af"
+[1/2] Building CXX object CMakeFiles/cmTC_be2af.dir/src.cxx.o
+FAILED: CMakeFiles/cmTC_be2af.dir/src.cxx.o 
+/home/longchair/github/longchair/LibreELEC.tv/build.PlexMediaPlayer-ROCK64.aarch64-9.0-devel/toolchain/bin/aarch64-libreelec-linux-gnueabi-g++    -march=armv8-a+crc+crypto -mabi=lp64 -Wno-psabi -mcpu=cortex-a53+crc+crypto -fomit-frame-pointer -Wall -pipe -Os -DHAVE_FLAG_mmacosx_version_min=10.9   -mmacosx-version-min=10.9 -o CMakeFiles/cmTC_be2af.dir/src.cxx.o -c src.cxx
+aarch64-libreelec-linux-gnueabi-g++-7.2.0: error: unrecognized command line option '-mmacosx-version-min=10.9'
+ninja: build stopped: subcommand failed.
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test HAVE_FLAG_/Oy_ failed with the following output:
+Change Dir: /home/longchair/github/longchair/LibreELEC.tv/build.PlexMediaPlayer-ROCK64.aarch64-9.0-devel/plexmediaplayer-dist-ninja/.aarch64-libreelec-linux-gnueabi/CMakeFiles/CMakeTmp
+
+Run Build Command:"/home/longchair/github/longchair/LibreELEC.tv/build.PlexMediaPlayer-ROCK64.aarch64-9.0-devel/toolchain/bin/ninja" "cmTC_0ea49"
+[1/2] Building CXX object CMakeFiles/cmTC_0ea49.dir/src.cxx.o
+FAILED: CMakeFiles/cmTC_0ea49.dir/src.cxx.o 
+/home/longchair/github/longchair/LibreELEC.tv/build.PlexMediaPlayer-ROCK64.aarch64-9.0-devel/toolchain/bin/aarch64-libreelec-linux-gnueabi-g++    -march=armv8-a+crc+crypto -mabi=lp64 -Wno-psabi -mcpu=cortex-a53+crc+crypto -fomit-frame-pointer -Wall -pipe -Os -DHAVE_FLAG_/Oy_   /Oy- -o CMakeFiles/cmTC_0ea49.dir/src.cxx.o -c src.cxx
+aarch64-libreelec-linux-gnueabi-g++-7.2.0: error: /Oy-: No such file or directory
+ninja: build stopped: subcommand failed.
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test HAVE_FLAG_/wd4244 failed with the following output:
+Change Dir: /home/longchair/github/longchair/LibreELEC.tv/build.PlexMediaPlayer-ROCK64.aarch64-9.0-devel/plexmediaplayer-dist-ninja/.aarch64-libreelec-linux-gnueabi/CMakeFiles/CMakeTmp
+
+Run Build Command:"/home/longchair/github/longchair/LibreELEC.tv/build.PlexMediaPlayer-ROCK64.aarch64-9.0-devel/toolchain/bin/ninja" "cmTC_3d72d"
+[1/2] Building CXX object CMakeFiles/cmTC_3d72d.dir/src.cxx.o
+FAILED: CMakeFiles/cmTC_3d72d.dir/src.cxx.o 
+/home/longchair/github/longchair/LibreELEC.tv/build.PlexMediaPlayer-ROCK64.aarch64-9.0-devel/toolchain/bin/aarch64-libreelec-linux-gnueabi-g++    -march=armv8-a+crc+crypto -mabi=lp64 -Wno-psabi -mcpu=cortex-a53+crc+crypto -fomit-frame-pointer -Wall -pipe -Os -DHAVE_FLAG_/wd4244   /wd4244 -o CMakeFiles/cmTC_3d72d.dir/src.cxx.o -c src.cxx
+aarch64-libreelec-linux-gnueabi-g++-7.2.0: error: /wd4244: No such file or directory
+ninja: build stopped: subcommand failed.
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test HAVE_FLAG_/wd4267 failed with the following output:
+Change Dir: /home/longchair/github/longchair/LibreELEC.tv/build.PlexMediaPlayer-ROCK64.aarch64-9.0-devel/plexmediaplayer-dist-ninja/.aarch64-libreelec-linux-gnueabi/CMakeFiles/CMakeTmp
+
+Run Build Command:"/home/longchair/github/longchair/LibreELEC.tv/build.PlexMediaPlayer-ROCK64.aarch64-9.0-devel/toolchain/bin/ninja" "cmTC_fdcbf"
+[1/2] Building CXX object CMakeFiles/cmTC_fdcbf.dir/src.cxx.o
+FAILED: CMakeFiles/cmTC_fdcbf.dir/src.cxx.o 
+/home/longchair/github/longchair/LibreELEC.tv/build.PlexMediaPlayer-ROCK64.aarch64-9.0-devel/toolchain/bin/aarch64-libreelec-linux-gnueabi-g++    -march=armv8-a+crc+crypto -mabi=lp64 -Wno-psabi -mcpu=cortex-a53+crc+crypto -fomit-frame-pointer -Wall -pipe -Os -DHAVE_FLAG_/wd4267   /wd4267 -o CMakeFiles/cmTC_fdcbf.dir/src.cxx.o -c src.cxx
+aarch64-libreelec-linux-gnueabi-g++-7.2.0: error: /wd4267: No such file or directory
+ninja: build stopped: subcommand failed.
+
+Source file was:
+int main() { return 0; }
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/longchair/github/longchair/LibreELEC.tv/build.PlexMediaPlayer-ROCK64.aarch64-9.0-devel/plexmediaplayer-dist-ninja/.aarch64-libreelec-linux-gnueabi/CMakeFiles/CMakeTmp
+
+Run Build Command:"/home/longchair/github/longchair/LibreELEC.tv/build.PlexMediaPlayer-ROCK64.aarch64-9.0-devel/toolchain/bin/ninja" "cmTC_fff55"
+[1/2] Building C object CMakeFiles/cmTC_fff55.dir/CheckSymbolExists.c.o
+cc1: warning: command line option '-fvisibility-inlines-hidden' is valid for C++/ObjC++ but not for C
+[2/2] Linking C executable cmTC_fff55
+FAILED: cmTC_fff55 
+: && /home/longchair/github/longchair/LibreELEC.tv/build.PlexMediaPlayer-ROCK64.aarch64-9.0-devel/toolchain/bin/aarch64-libreelec-linux-gnueabi-gcc -march=armv8-a+crc+crypto -mabi=lp64 -Wno-psabi -mcpu=cortex-a53+crc+crypto -fomit-frame-pointer -Wall -pipe -Os -Wall -fno-omit-frame-pointer -fvisibility-inlines-hidden  -march=armv8-a+crc+crypto -mtune=cortex-a53 -Wl,--as-needed -fuse-ld=gold   -rdynamic CMakeFiles/cmTC_fff55.dir/CheckSymbolExists.c.o  -o cmTC_fff55   && :
+CMakeFiles/cmTC_fff55.dir/CheckSymbolExists.c.o:CheckSymbolExists.c:function main: error: undefined reference to 'pthread_create'
+CMakeFiles/cmTC_fff55.dir/CheckSymbolExists.c.o:CheckSymbolExists.c:function main: error: undefined reference to 'pthread_create'
+collect2: error: ld returned 1 exit status
+ninja: build stopped: subcommand failed.
+
+File /home/longchair/github/longchair/LibreELEC.tv/build.PlexMediaPlayer-ROCK64.aarch64-9.0-devel/plexmediaplayer-dist-ninja/.aarch64-libreelec-linux-gnueabi/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/longchair/github/longchair/LibreELEC.tv/build.PlexMediaPlayer-ROCK64.aarch64-9.0-devel/plexmediaplayer-dist-ninja/.aarch64-libreelec-linux-gnueabi/CMakeFiles/CMakeTmp
+
+Run Build Command:"/home/longchair/github/longchair/LibreELEC.tv/build.PlexMediaPlayer-ROCK64.aarch64-9.0-devel/toolchain/bin/ninja" "cmTC_541f4"
+[1/2] Building C object CMakeFiles/cmTC_541f4.dir/CheckFunctionExists.c.o
+cc1: warning: command line option '-fvisibility-inlines-hidden' is valid for C++/ObjC++ but not for C
+[2/2] Linking C executable cmTC_541f4
+FAILED: cmTC_541f4 
+: && /home/longchair/github/longchair/LibreELEC.tv/build.PlexMediaPlayer-ROCK64.aarch64-9.0-devel/toolchain/bin/aarch64-libreelec-linux-gnueabi-gcc -march=armv8-a+crc+crypto -mabi=lp64 -Wno-psabi -mcpu=cortex-a53+crc+crypto -fomit-frame-pointer -Wall -pipe -Os -Wall -fno-omit-frame-pointer -fvisibility-inlines-hidden -DCHECK_FUNCTION_EXISTS=pthread_create  -march=armv8-a+crc+crypto -mtune=cortex-a53 -Wl,--as-needed -fuse-ld=gold   -rdynamic CMakeFiles/cmTC_541f4.dir/CheckFunctionExists.c.o  -o cmTC_541f4  -lpthreads && :
+/home/longchair/github/longchair/LibreELEC.tv/build.PlexMediaPlayer-ROCK64.aarch64-9.0-devel/toolchain/lib/gcc/aarch64-libreelec-linux-gnueabi/7.2.0/../../../../aarch64-libreelec-linux-gnueabi/bin/ld.gold: error: cannot find -lpthreads
+CMakeFiles/cmTC_541f4.dir/CheckFunctionExists.c.o:CheckFunctionExists.c:function main: error: undefined reference to 'pthread_create'
+collect2: error: ld returned 1 exit status
+ninja: build stopped: subcommand failed.
+
+
+Performing C++ SOURCE FILE Test QT5_HAVE_OPTIMALORIENTATION failed with the following output:
+Change Dir: /home/longchair/github/longchair/LibreELEC.tv/build.PlexMediaPlayer-ROCK64.aarch64-9.0-devel/plexmediaplayer-dist-ninja/.aarch64-libreelec-linux-gnueabi/CMakeFiles/CMakeTmp
+
+Run Build Command:"/home/longchair/github/longchair/LibreELEC.tv/build.PlexMediaPlayer-ROCK64.aarch64-9.0-devel/toolchain/bin/ninja" "cmTC_ad060"
+[1/2] Building CXX object CMakeFiles/cmTC_ad060.dir/src.cxx.o
+FAILED: CMakeFiles/cmTC_ad060.dir/src.cxx.o 
+/home/longchair/github/longchair/LibreELEC.tv/build.PlexMediaPlayer-ROCK64.aarch64-9.0-devel/toolchain/bin/aarch64-libreelec-linux-gnueabi-g++  -DQT_CORE_LIB -DQT_DBUS_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_QML_LIB -DQT_QUICK_LIB -DQT_WEBCHANNEL_LIB -DQT_WEBENGINECORE_LIB -DQT_WEBENGINE_LIB -DQT_WIDGETS_LIB -DQT_XML_LIB -isystem /home/longchair/github/longchair/LibreELEC.tv/build.PlexMediaPlayer-ROCK64.aarch64-9.0-devel/toolchain/aarch64-libreelec-linux-gnueabi/sysroot/usr/local/qt5/include -isystem /home/longchair/github/longchair/LibreELEC.tv/build.PlexMediaPlayer-ROCK64.aarch64-9.0-devel/toolchain/aarch64-libreelec-linux-gnueabi/sysroot/usr/local/qt5/include/QtWebEngine -isystem /home/longchair/github/longchair/LibreELEC.tv/build.PlexMediaPlayer-ROCK64.aarch64-9.0-devel/toolchain/aarch64-libreelec-linux-gnueabi/sysroot/usr/local/qt5/include/QtWebEngineCore -isystem /home/longchair/github/longchair/LibreELEC.tv/build.PlexMediaPlayer-ROCK64.aarch64-9.0-devel/toolchain/aarch64-libreelec-linux-gnueabi/sysroot/usr/local/qt5/include/QtQuick -isystem /home/longchair/github/longchair/LibreELEC.tv/build.PlexMediaPlayer-ROCK64.aarch64-9.0-devel/toolchain/aarch64-libreelec-linux-gnueabi/sysroot/usr/local/qt5/include/QtGui -isystem /home/longchair/github/longchair/LibreELEC.tv/build.PlexMediaPlayer-ROCK64.aarch64-9.0-devel/toolchain/aarch64-libreelec-linux-gnueabi/sysroot/usr/local/qt5/include/QtCore -isystem /home/longchair/github/longchair/LibreELEC.tv/build.PlexMediaPlayer-ROCK64.aarch64-9.0-devel/toolchain/aarch64-libreelec-linux-gnueabi/sysroot/usr/local/qt5/../../../../../../mkspecs/devices/linux-Rockchip-g++ -isystem /home/longchair/github/longchair/LibreELEC.tv/build.PlexMediaPlayer-ROCK64.aarch64-9.0-devel/toolchain/aarch64-libreelec-linux-gnueabi/sysroot/usr/include -isystem /home/longchair/github/longchair/LibreELEC.tv/build.PlexMediaPlayer-ROCK64.aarch64-9.0-devel/toolchain/aarch64-libreelec-linux-gnueabi/sysroot/usr/local/qt5/include/QtQml -isystem /home/longchair/github/longchair/LibreELEC.tv/build.PlexMediaPlayer-ROCK64.aarch64-9.0-devel/toolchain/aarch64-libreelec-linux-gnueabi/sysroot/usr/local/qt5/include/QtNetwork -isystem /home/longchair/github/longchair/LibreELEC.tv/build.PlexMediaPlayer-ROCK64.aarch64-9.0-devel/toolchain/aarch64-libreelec-linux-gnueabi/sysroot/usr/local/qt5/include/QtWebChannel -I/home/longchair/github/longchair/LibreELEC.tv/build.PlexMediaPlayer-ROCK64.aarch64-9.0-devel/toolchain/aarch64-libreelec-linux-gnueabi/sysroot/usr/local/qt5/include/QtWebEngine/5.10.0 -I/home/longchair/github/longchair/LibreELEC.tv/build.PlexMediaPlayer-ROCK64.aarch64-9.0-devel/toolchain/aarch64-libreelec-linux-gnueabi/sysroot/usr/local/qt5/include/QtWebEngine/5.10.0/QtWebEngine -I/home/longchair/github/longchair/LibreELEC.tv/build.PlexMediaPlayer-ROCK64.aarch64-9.0-devel/toolchain/aarch64-libreelec-linux-gnueabi/sysroot/usr/local/qt5/include/QtWebEngineCore/5.10.0 -I/home/longchair/github/longchair/LibreELEC.tv/build.PlexMediaPlayer-ROCK64.aarch64-9.0-devel/toolchain/aarch64-libreelec-linux-gnueabi/sysroot/usr/local/qt5/include/QtWebEngineCore/5.10.0/QtWebEngineCore -I/home/longchair/github/longchair/LibreELEC.tv/build.PlexMediaPlayer-ROCK64.aarch64-9.0-devel/toolchain/aarch64-libreelec-linux-gnueabi/sysroot/usr/local/qt5/include/QtQuick/5.10.0 -I/home/longchair/github/longchair/LibreELEC.tv/build.PlexMediaPlayer-ROCK64.aarch64-9.0-devel/toolchain/aarch64-libreelec-linux-gnueabi/sysroot/usr/local/qt5/include/QtQuick/5.10.0/QtQuick -I/home/longchair/github/longchair/LibreELEC.tv/build.PlexMediaPlayer-ROCK64.aarch64-9.0-devel/toolchain/aarch64-libreelec-linux-gnueabi/sysroot/usr/local/qt5/include/QtGui/5.10.0 -I/home/longchair/github/longchair/LibreELEC.tv/build.PlexMediaPlayer-ROCK64.aarch64-9.0-devel/toolchain/aarch64-libreelec-linux-gnueabi/sysroot/usr/local/qt5/include/QtGui/5.10.0/QtGui -I/home/longchair/github/longchair/LibreELEC.tv/build.PlexMediaPlayer-ROCK64.aarch64-9.0-devel/toolchain/aarch64-libreelec-linux-gnueabi/sysroot/usr/local/qt5/include/QtCore/5.10.0 -I/home/longchair/github/longchair/LibreELEC.tv/build.PlexMediaPlayer-ROCK64.aarch64-9.0-devel/toolchain/aarch64-libreelec-linux-gnueabi/sysroot/usr/local/qt5/include/QtCore/5.10.0/QtCore -I/home/longchair/github/longchair/LibreELEC.tv/build.PlexMediaPlayer-ROCK64.aarch64-9.0-devel/toolchain/aarch64-libreelec-linux-gnueabi/sysroot/usr/local/qt5/include/QtQml/5.10.0 -I/home/longchair/github/longchair/LibreELEC.tv/build.PlexMediaPlayer-ROCK64.aarch64-9.0-devel/toolchain/aarch64-libreelec-linux-gnueabi/sysroot/usr/local/qt5/include/QtQml/5.10.0/QtQml -I/home/longchair/github/longchair/LibreELEC.tv/build.PlexMediaPlayer-ROCK64.aarch64-9.0-devel/toolchain/aarch64-libreelec-linux-gnueabi/sysroot/usr/local/qt5/include/QtNetwork/5.10.0 -I/home/longchair/github/longchair/LibreELEC.tv/build.PlexMediaPlayer-ROCK64.aarch64-9.0-devel/toolchain/aarch64-libreelec-linux-gnueabi/sysroot/usr/local/qt5/include/QtNetwork/5.10.0/QtNetwork -I/home/longchair/github/longchair/LibreELEC.tv/build.PlexMediaPlayer-ROCK64.aarch64-9.0-devel/toolchain/aarch64-libreelec-linux-gnueabi/sysroot/usr/local/qt5/include/QtWebChannel/5.10.0 -I/home/longchair/github/longchair/LibreELEC.tv/build.PlexMediaPlayer-ROCK64.aarch64-9.0-devel/toolchain/aarch64-libreelec-linux-gnueabi/sysroot/usr/local/qt5/include/QtWebChannel/5.10.0/QtWebChannel -isystem /home/longchair/github/longchair/LibreELEC.tv/build.PlexMediaPlayer-ROCK64.aarch64-9.0-devel/toolchain/aarch64-libreelec-linux-gnueabi/sysroot/usr/local/qt5/include/QtXml -isystem /home/longchair/github/longchair/LibreELEC.tv/build.PlexMediaPlayer-ROCK64.aarch64-9.0-devel/toolchain/aarch64-libreelec-linux-gnueabi/sysroot/usr/local/qt5/include/QtWidgets -isystem /home/longchair/github/longchair/LibreELEC.tv/build.PlexMediaPlayer-ROCK64.aarch64-9.0-devel/toolchain/aarch64-libreelec-linux-gnueabi/sysroot/usr/local/qt5/include/QtDBus -march=armv8-a+crc+crypto -mabi=lp64 -Wno-psabi -mcpu=cortex-a53+crc+crypto -fomit-frame-pointer -Wall -pipe -Os -Wall -fno-omit-frame-pointer -fvisibility-inlines-hidden  -DQT5_HAVE_OPTIMALORIENTATION   -fPIC -std=gnu++11 -o CMakeFiles/cmTC_ad060.dir/src.cxx.o -c src.cxx
+In file included from /home/longchair/github/longchair/LibreELEC.tv/build.PlexMediaPlayer-ROCK64.aarch64-9.0-devel/toolchain/aarch64-libreelec-linux-gnueabi/include/c++/7.2.0/bits/stl_algo.h:59:0,
+                 from /home/longchair/github/longchair/LibreELEC.tv/build.PlexMediaPlayer-ROCK64.aarch64-9.0-devel/toolchain/aarch64-libreelec-linux-gnueabi/include/c++/7.2.0/algorithm:62,
+                 from /home/longchair/github/longchair/LibreELEC.tv/build.PlexMediaPlayer-ROCK64.aarch64-9.0-devel/toolchain/aarch64-libreelec-linux-gnueabi/sysroot/usr/local/qt5/include/QtCore/qglobal.h:110,
+                 from /home/longchair/github/longchair/LibreELEC.tv/build.PlexMediaPlayer-ROCK64.aarch64-9.0-devel/toolchain/aarch64-libreelec-linux-gnueabi/sysroot/usr/local/qt5/include/QtGui/qtguiglobal.h:43,
+                 from /home/longchair/github/longchair/LibreELEC.tv/build.PlexMediaPlayer-ROCK64.aarch64-9.0-devel/toolchain/aarch64-libreelec-linux-gnueabi/sysroot/usr/local/qt5/include/QtGui/qsurfaceformat.h:42,
+                 from /home/longchair/github/longchair/LibreELEC.tv/build.PlexMediaPlayer-ROCK64.aarch64-9.0-devel/toolchain/aarch64-libreelec-linux-gnueabi/sysroot/usr/local/qt5/include/QtGui/QSurfaceFormat:1,
+                 from src.cxx:2:
+/home/longchair/github/longchair/LibreELEC.tv/build.PlexMediaPlayer-ROCK64.aarch64-9.0-devel/toolchain/aarch64-libreelec-linux-gnueabi/include/c++/7.2.0/cstdlib:75:15: fatal error: stdlib.h: No such file or directory
+ #include_next <stdlib.h>
+               ^~~~~~~~~~
+compilation terminated.
+ninja: build stopped: subcommand failed.
+
+Source file was:
+
+  #include <QSurfaceFormat>
+
+  int main(int argc, char** argv) {
+    QSurfaceFormat::FormatOption o = QSurfaceFormat::UseOptimalOrientation;
+    return 0;
+  }
+
+Performing C++ SOURCE FILE Test ICONV_SECOND_ARGUMENT_IS_CONST failed with the following output:
+Change Dir: /home/longchair/github/longchair/LibreELEC.tv/build.PlexMediaPlayer-ROCK64.aarch64-9.0-devel/plexmediaplayer-dist-ninja/.aarch64-libreelec-linux-gnueabi/CMakeFiles/CMakeTmp
+
+Run Build Command:"/home/longchair/github/longchair/LibreELEC.tv/build.PlexMediaPlayer-ROCK64.aarch64-9.0-devel/toolchain/bin/ninja" "cmTC_0a5ca"
+[1/2] Building CXX object CMakeFiles/cmTC_0a5ca.dir/src.cxx.o
+FAILED: CMakeFiles/cmTC_0a5ca.dir/src.cxx.o 
+/home/longchair/github/longchair/LibreELEC.tv/build.PlexMediaPlayer-ROCK64.aarch64-9.0-devel/toolchain/bin/aarch64-libreelec-linux-gnueabi-g++   -I/home/longchair/github/longchair/LibreELEC.tv/build.PlexMediaPlayer-ROCK64.aarch64-9.0-devel/toolchain/aarch64-libreelec-linux-gnueabi/sysroot/usr/include -march=armv8-a+crc+crypto -mabi=lp64 -Wno-psabi -mcpu=cortex-a53+crc+crypto -fomit-frame-pointer -Wall -pipe -Os -Wall -fno-omit-frame-pointer -fvisibility-inlines-hidden  -DICONV_SECOND_ARGUMENT_IS_CONST -o CMakeFiles/cmTC_0a5ca.dir/src.cxx.o -c src.cxx
+src.cxx: In function 'int main()':
+src.cxx:9:17: error: invalid conversion from 'const char**' to 'char**' [-fpermissive]
+     iconv(conv, &in, &ilen, &out, &olen);
+                 ^~~
+In file included from src.cxx:2:0:
+/home/longchair/github/longchair/LibreELEC.tv/build.PlexMediaPlayer-ROCK64.aarch64-9.0-devel/toolchain/aarch64-libreelec-linux-gnueabi/sysroot/usr/include/iconv.h:42:15: note:   initializing argument 2 of 'size_t iconv(iconv_t, char**, size_t*, char**, size_t*)'
+ extern size_t iconv (iconv_t __cd, char **__restrict __inbuf,
+               ^~~~~
+ninja: build stopped: subcommand failed.
+
+Source file was:
+
+  #include <iconv.h>
+  int main(){
+    iconv_t conv = 0;
+    const char* in = 0;
+    size_t ilen = 0;
+    char* out = 0;
+    size_t olen = 0;
+    iconv(conv, &in, &ilen, &out, &olen);
+    return 0;
+  }
+

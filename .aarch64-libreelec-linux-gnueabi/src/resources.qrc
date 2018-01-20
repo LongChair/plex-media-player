@@ -1,0 +1,86 @@
+<RCC>
+<qresource prefix="/sounds">
+ <file alias="Cursor.wav">/home/longchair/github/longchair/LibreELEC.tv/build.PlexMediaPlayer-ROCK64.aarch64-9.0-devel/plexmediaplayer-dist-ninja/resources/sounds/Cursor.wav</file>
+</qresource>
+<qresource prefix="/sounds">
+ <file alias="Out.wav">/home/longchair/github/longchair/LibreELEC.tv/build.PlexMediaPlayer-ROCK64.aarch64-9.0-devel/plexmediaplayer-dist-ninja/resources/sounds/Out.wav</file>
+</qresource>
+<qresource prefix="/sounds">
+ <file alias="Shutter.wav">/home/longchair/github/longchair/LibreELEC.tv/build.PlexMediaPlayer-ROCK64.aarch64-9.0-devel/plexmediaplayer-dist-ninja/resources/sounds/Shutter.wav</file>
+</qresource>
+<qresource prefix="/sounds">
+ <file alias="Notify.wav">/home/longchair/github/longchair/LibreELEC.tv/build.PlexMediaPlayer-ROCK64.aarch64-9.0-devel/plexmediaplayer-dist-ninja/resources/sounds/Notify.wav</file>
+</qresource>
+<qresource prefix="/sounds">
+ <file alias="Click.wav">/home/longchair/github/longchair/LibreELEC.tv/build.PlexMediaPlayer-ROCK64.aarch64-9.0-devel/plexmediaplayer-dist-ninja/resources/sounds/Click.wav</file>
+</qresource>
+<qresource prefix="/sounds">
+ <file alias="Back.wav">/home/longchair/github/longchair/LibreELEC.tv/build.PlexMediaPlayer-ROCK64.aarch64-9.0-devel/plexmediaplayer-dist-ninja/resources/sounds/Back.wav</file>
+</qresource>
+<qresource prefix="/images">
+ <file alias="icon.png">/home/longchair/github/longchair/LibreELEC.tv/build.PlexMediaPlayer-ROCK64.aarch64-9.0-devel/plexmediaplayer-dist-ninja/resources/images/icon.png</file>
+</qresource>
+<qresource prefix="/images">
+ <file alias="splash.png">/home/longchair/github/longchair/LibreELEC.tv/build.PlexMediaPlayer-ROCK64.aarch64-9.0-devel/plexmediaplayer-dist-ninja/resources/images/splash.png</file>
+</qresource>
+<qresource prefix="/images">
+ <file alias="icon.svg">/home/longchair/github/longchair/LibreELEC.tv/build.PlexMediaPlayer-ROCK64.aarch64-9.0-devel/plexmediaplayer-dist-ninja/resources/images/icon.svg</file>
+</qresource>
+<qresource prefix="/images">
+ <file alias="splash.svg">/home/longchair/github/longchair/LibreELEC.tv/build.PlexMediaPlayer-ROCK64.aarch64-9.0-devel/plexmediaplayer-dist-ninja/resources/images/splash.svg</file>
+</qresource>
+<qresource prefix="/inputmaps">
+ <file alias="apple-remote.json">/home/longchair/github/longchair/LibreELEC.tv/build.PlexMediaPlayer-ROCK64.aarch64-9.0-devel/plexmediaplayer-dist-ninja/resources/inputmaps/apple-remote.json</file>
+</qresource>
+<qresource prefix="/inputmaps">
+ <file alias="keyboard.json">/home/longchair/github/longchair/LibreELEC.tv/build.PlexMediaPlayer-ROCK64.aarch64-9.0-devel/plexmediaplayer-dist-ninja/resources/inputmaps/keyboard.json</file>
+</qresource>
+<qresource prefix="/inputmaps">
+ <file alias="apple-media-keys.json">/home/longchair/github/longchair/LibreELEC.tv/build.PlexMediaPlayer-ROCK64.aarch64-9.0-devel/plexmediaplayer-dist-ninja/resources/inputmaps/apple-media-keys.json</file>
+</qresource>
+<qresource prefix="/inputmaps">
+ <file alias="dualshock4-xbox-emulate.json">/home/longchair/github/longchair/LibreELEC.tv/build.PlexMediaPlayer-ROCK64.aarch64-9.0-devel/plexmediaplayer-dist-ninja/resources/inputmaps/dualshock4-xbox-emulate.json</file>
+</qresource>
+<qresource prefix="/inputmaps">
+ <file alias="LIRC.json">/home/longchair/github/longchair/LibreELEC.tv/build.PlexMediaPlayer-ROCK64.aarch64-9.0-devel/plexmediaplayer-dist-ninja/resources/inputmaps/LIRC.json</file>
+</qresource>
+<qresource prefix="/inputmaps">
+ <file alias="dualshock4.json">/home/longchair/github/longchair/LibreELEC.tv/build.PlexMediaPlayer-ROCK64.aarch64-9.0-devel/plexmediaplayer-dist-ninja/resources/inputmaps/dualshock4.json</file>
+</qresource>
+<qresource prefix="/inputmaps">
+ <file alias="roku.json">/home/longchair/github/longchair/LibreELEC.tv/build.PlexMediaPlayer-ROCK64.aarch64-9.0-devel/plexmediaplayer-dist-ninja/resources/inputmaps/roku.json</file>
+</qresource>
+<qresource prefix="/inputmaps">
+ <file alias="xbox-controller-mac.json">/home/longchair/github/longchair/LibreELEC.tv/build.PlexMediaPlayer-ROCK64.aarch64-9.0-devel/plexmediaplayer-dist-ninja/resources/inputmaps/xbox-controller-mac.json</file>
+</qresource>
+<qresource prefix="/inputmaps">
+ <file alias="xbox-controller-windows.json">/home/longchair/github/longchair/LibreELEC.tv/build.PlexMediaPlayer-ROCK64.aarch64-9.0-devel/plexmediaplayer-dist-ninja/resources/inputmaps/xbox-controller-windows.json</file>
+</qresource>
+<qresource prefix="/inputmaps">
+ <file alias="cec.json">/home/longchair/github/longchair/LibreELEC.tv/build.PlexMediaPlayer-ROCK64.aarch64-9.0-devel/plexmediaplayer-dist-ninja/resources/inputmaps/cec.json</file>
+</qresource>
+<qresource prefix="/inputmaps">
+ <file alias="wiimote.json">/home/longchair/github/longchair/LibreELEC.tv/build.PlexMediaPlayer-ROCK64.aarch64-9.0-devel/plexmediaplayer-dist-ninja/resources/inputmaps/wiimote.json</file>
+</qresource>
+<qresource prefix="/settings">
+ <file alias="settings_description.json">/home/longchair/github/longchair/LibreELEC.tv/build.PlexMediaPlayer-ROCK64.aarch64-9.0-devel/plexmediaplayer-dist-ninja/resources/settings/settings_description.json</file>
+</qresource>
+<qresource prefix="/misc">
+ <file alias="licenses.txt">/home/longchair/github/longchair/LibreELEC.tv/build.PlexMediaPlayer-ROCK64.aarch64-9.0-devel/plexmediaplayer-dist-ninja/resources/misc/licenses.txt</file>
+</qresource>
+<qresource prefix="/testmedia">
+ <file alias="README.txt">/home/longchair/github/longchair/LibreELEC.tv/build.PlexMediaPlayer-ROCK64.aarch64-9.0-devel/plexmediaplayer-dist-ninja/resources/testmedia/README.txt</file>
+</qresource>
+<qresource prefix="/testmedia">
+ <file alias="high_4096x2160.h264">/home/longchair/github/longchair/LibreELEC.tv/build.PlexMediaPlayer-ROCK64.aarch64-9.0-devel/plexmediaplayer-dist-ninja/resources/testmedia/high_4096x2160.h264</file>
+</qresource>
+<qresource prefix="/testmedia">
+ <file alias="high_4096x2304.h264">/home/longchair/github/longchair/LibreELEC.tv/build.PlexMediaPlayer-ROCK64.aarch64-9.0-devel/plexmediaplayer-dist-ninja/resources/testmedia/high_4096x2304.h264</file>
+</qresource>
+<qresource prefix="/testmedia">
+ <file alias="high_1920x1080.h264">/home/longchair/github/longchair/LibreELEC.tv/build.PlexMediaPlayer-ROCK64.aarch64-9.0-devel/plexmediaplayer-dist-ninja/resources/testmedia/high_1920x1080.h264</file>
+</qresource>
+<qresource prefix="ui">
+ <file alias="webview.qml">/home/longchair/github/longchair/LibreELEC.tv/build.PlexMediaPlayer-ROCK64.aarch64-9.0-devel/plexmediaplayer-dist-ninja/src/ui/webview.qml</file>
+</qresource>
+</RCC>

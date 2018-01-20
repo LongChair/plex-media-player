@@ -3,17 +3,20 @@
 #include <stdexcept>
 
 #include <QCoreApplication>
+#include <QGuiApplication>
 #include <QOpenGLContext>
 #include <QRunnable>
+#include <QScreen>
 
 #include <QtGui/QOpenGLFramebufferObject>
 
 #include <QtQuick/QQuickWindow>
 #include <QOpenGLFunctions>
+#include <qpa/qplatformnativeinterface.h>
 
 #include "QsLog.h"
 #include "utils/Utils.h"
-
+#include "Globals.h"
 
 #if defined(Q_OS_WIN32)
 #include <windows.h>
@@ -21,12 +24,55 @@
 #include <avrt.h>
 #endif
 
-#ifdef USE_X11EXTRAS
+#if defined(USE_X11EXTRAS)
 #include <QX11Info>
 static void* MPGetNativeDisplay(const char* name)
 {
   if (strcmp(name, "x11") == 0)
     return QX11Info::display();
+}
+#elif defined(USE_DRM)
+static void* MPGetNativeDisplay(const char* name)
+{
+  static struct mpv_opengl_cb_window_pos pos;
+  static struct mpv_opengl_cb_drm_params params;
+
+  if (strcmp(name, "opengl-cb-window-pos") == 0)
+  {
+    QWindow *window = (QWindow*)Globals::MainWindow();
+    if (window)
+    {
+        pos.x = window->geometry().left();
+        pos.y = window->geometry().top();
+        pos.width = window->geometry().width();
+        pos.height = window->geometry().height();
+        return &pos;
+    }
+  }
+  if (strcmp(name, "opengl-cb-drm-params") == 0)
+  {
+    QGuiApplication *app = static_cast<QGuiApplication *>(QGuiApplication::instance());
+    if (app)
+    {
+        void *p;
+        p = app->platformNativeInterface()->nativeResourceForIntegration("dri_fd");
+        if (p)
+            params.fd = (int)(qintptr)p;
+
+        QWindow *window = (QWindow*)Globals::MainWindow();
+        p = app->platformNativeInterface()->nativeResourceForScreen("dri_crtcid", window->screen());
+        if (p)
+            params.crtc_id = (int)(qintptr)p;
+
+        p = app->platformNativeInterface()->nativeResourceForIntegration("dri_atomic_request");
+        if (p)
+            params.atomic_request = (_drmModeAtomicReq *)(qintptr)p;
+
+        return &params;
+    }
+
+
+  }
   return nullptr;
 }
 #endif
@@ -43,7 +89,7 @@ static void* get_proc_address(void* ctx, const char* name)
   void *res = (void *)glctx->getProcAddress(QByteArray(name));
   if (strcmp(name, "glMPGetNativeDisplay") == 0)
   {
-#ifdef USE_X11EXTRAS
+#if defined(USE_X11EXTRAS) || defined(TARGET_ROCKCHIP)
     return (void *)&MPGetNativeDisplay;
 #else
     return nullptr;

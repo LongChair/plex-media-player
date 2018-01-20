@@ -160,6 +160,11 @@ bool PlayerComponent::componentInitialize()
   mpv::qt::set_property(m_mpv, "hr-seek", "no");
   // Force vo_rpi to fullscreen.
   mpv::qt::set_property(m_mpv, "fullscreen", true);
+  // wait for cache to be filled before starting playback
+  mpv::qt::set_property(m_mpv, "cache-pause-wait", "yes");
+  // define maximum cache time in seconds
+  mpv::qt::set_property(m_mpv, "cache-pause-secs", 20);
+
 #endif
 
   if (mpv_initialize(m_mpv) < 0)
@@ -249,12 +254,6 @@ void PlayerComponent::setWindow(QQuickWindow* window)
 #ifdef TARGET_RPI
   window->setFlags(Qt::FramelessWindowHint);
   vo = "rpi";
-#endif
-
-#ifdef TARGET_ROCKCHIP
-  window->setFlags(Qt::FramelessWindowHint);
-  mpv::qt::set_property(m_mpv, "opengl-hwdec-interop", "drmprime-drm");
-  mpv::qt::set_property(m_mpv, "drm-layer", 2);
 #endif
 
   m_window = window;
