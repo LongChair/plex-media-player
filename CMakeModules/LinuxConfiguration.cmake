@@ -16,5 +16,11 @@ else()
   Message(STATUS "Enabling D-Bus power management")
 endif()
 
+find_package(DRM)
+if (DRM_FOUND)
+    set(EXTRA_LIBS ${EXTRA_LIBS} ${DRM_LIBRARIES})
+    include_directories(${DRM_INCLUDE_DIR})
+endif()
+
 set(INSTALL_BIN_DIR bin)
 set(INSTALL_RESOURCE_DIR share/plexmediaplayer)

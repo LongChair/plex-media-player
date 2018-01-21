@@ -13,6 +13,8 @@
 #include "rpi/DisplayManagerRPI.h"
 #elif defined(USE_X11XRANDR)
 #include "x11/DisplayManagerX11.h"
+#elif defined(USE_DRM)
+#include "drm/DisplayManagerDRM.h"
 #elif defined(Q_OS_WIN)
 #include "win/DisplayManagerWin.h"
 #endif
@@ -59,6 +61,8 @@ bool DisplayComponent::componentInitialize()
   m_displayManager = new DisplayManagerRPI(this);
 #elif defined(USE_X11XRANDR)
   m_displayManager = new DisplayManagerX11(this);
+#elif defined(USE_DRM)
+  m_displayManager = new DisplayManagerDRM(this);
 #elif defined(Q_OS_WIN)
   m_displayManager = new DisplayManagerWin(this);
 #endif
