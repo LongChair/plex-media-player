@@ -158,11 +158,13 @@ int main(int argc, char *argv[])
       return EXIT_SUCCESS;
     }
 
+#if not defined(Q_OS_LINUX)
     auto scale = parser.value("scale-factor");
     if (scale.isEmpty() || scale == "auto")
       QCoreApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
     else if (scale != "none")
       qputenv("QT_SCALE_FACTOR", scale.toUtf8());
+#endif
 
     QApplication app(newArgc, newArgv);
     app.setWindowIcon(QIcon(":/images/icon.png"));
