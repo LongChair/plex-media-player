@@ -24,3 +24,12 @@ set(INSTALL_RESOURCE_DIR ${CMAKE_INSTALL_DATADIR}/plexmediaplayer)
 if(NOT OPENELEC)
   include(InstallLinuxDesktopFile)
 endif()
+
+find_package(DRM)
+if (DRM_FOUND)
+    set(EXTRA_LIBS ${EXTRA_LIBS} ${DRM_LIBRARIES})
+    include_directories(${DRM_INCLUDE_DIR})
+endif()
+
+set(INSTALL_BIN_DIR bin)
+set(INSTALL_RESOURCE_DIR share/plexmediaplayer)
