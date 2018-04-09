@@ -59,7 +59,7 @@ KonvergoWindow::KonvergoWindow(QWindow* parent) :
   InputComponent::Get().registerHostCommand("minimize", this, "minimizeWindow");
   InputComponent::Get().registerHostCommand("fullscreenCurrentMode", this, "toggleFullscreenNoSwitch");
 
-#ifdef TARGET_RPI
+#if (defined(TARGET_RPI) || defined(TARGET_ROCKCHIP))
   // On RPI, we use dispmanx layering - the video is on a layer below Konvergo,
   // and during playback the Konvergo window is partially transparent. The OSD
   // will be visible on top of the video as part of the Konvergo window.

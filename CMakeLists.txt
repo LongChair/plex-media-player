@@ -28,6 +28,12 @@ if(BUILD_TARGET STREQUAL "RPI")
   Message(STATUS "Build for Raspberry PI target")
 endif(BUILD_TARGET STREQUAL "RPI")
 
+
+if(BUILD_TARGET STREQUAL "ROCKCHIP")
+  add_definitions(-DTARGET_ROCKCHIP=1)
+  Message(STATUS "Build for RockChip target")
+endif(BUILD_TARGET STREQUAL "ROCKCHIP")
+
 option(ENABLE_HELPER "Enable PMP Helper" ON)
 if (ENABLE_HELPER)
   add_definitions(-DENABLE_HELPER=1)
