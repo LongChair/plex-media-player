@@ -9,7 +9,7 @@
 #include <QScreen>
 
 #include <QtGui/QOpenGLFramebufferObject>
-
+#include <qpa/qplatformnativeinterface.h>
 #include <QtQuick/QQuickWindow>
 #include <QOpenGLFunctions>
 
@@ -25,6 +25,10 @@
 
 #if defined(USE_X11EXTRAS)
 #include <QX11Info>
+#elif defined(USE_DRM)
+struct _drmModeAtomicReq *drm_atomic_request;
+struct mpv_opengl_drm_params drm_params;
+struct mpv_opengl_drm_osd_size osd_size;
 #endif
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
@@ -96,11 +100,42 @@ bool PlayerRenderer::init()
   };
 
 
+#if defined(USE_DRM)
+  QWindow *window = (QWindow*)Globals::MainWindow();
+  QGuiApplication *app = static_cast<QGuiApplication *>(QGuiApplication::instance());
+  void *p;
+  if (app && window)
+  {
+      p = app->platformNativeInterface()->nativeResourceForIntegration("dri_fd");
+      if (p)
+          drm_params.fd = (int)(qintptr)p;
+
+      p =  app->platformNativeInterface()->nativeResourceForScreen("dri_crtcid", window->screen());
+      if (p)
+          drm_params.crtc_id = (int)(qintptr)p;
+
+      p =  app->platformNativeInterface()->nativeResourceForScreen("dri_connectorid", window->screen());
+      if (p)
+          drm_params.connector_id = (int)(qintptr)p;
+
+      drm_params.atomic_request_ptr = &drm_atomic_request;
+      p = app->platformNativeInterface()->nativeResourceForIntegration("dri_atomic_request");
+      if (p)
+          drm_atomic_request = (_drmModeAtomicReq *)(qintptr)p;
+
+      osd_size.width = window->geometry().width();
+      osd_size.height = window->geometry().height();
+  }
+#endif
+
   static mpv_render_param params[] = {
       {MPV_RENDER_PARAM_API_TYPE, (void *)MPV_RENDER_API_TYPE_OPENGL},
       {MPV_RENDER_PARAM_OPENGL_INIT_PARAMS, &opengl_init_params},
 #if defined(USE_X11EXTRAS)
       {MPV_RENDER_PARAM_X11_DISPLAY, QX11Info::display()},
+#elif defined(USE_DRM)
+      {MPV_RENDER_PARAM_DRM_DISPLAY, &drm_params},
+      {MPV_RENDER_PARAM_DRM_OSD_SIZE, &osd_size},
 #endif
       {(mpv_render_param_type)0}
   };
@@ -164,6 +199,17 @@ void PlayerRenderer::render()
       context->functions()->glClear(GL_COLOR_BUFFER_BIT);
     }
   }
+
+#if defined(USE_DRM)
+  QGuiApplication *app = static_cast<QGuiApplication *>(QGuiApplication::instance());
+  if (app)
+  {
+      void *p = app->platformNativeInterface()->nativeResourceForIntegration("dri_atomic_request");
+      if (p)
+        drm_atomic_request = (_drmModeAtomicReq *)(qintptr)p;
+
+  }
+#endif
 
   mpv_opengl_fbo opengl_fbo = {
       fbo,              // .fbo

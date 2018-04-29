@@ -269,6 +269,10 @@ void PlayerComponent::setWindow(QQuickWindow* window)
 
   mpv::qt::set_property(m_mpv, "vo", vo);
 
+#if defined(USE_DRM)
+  mpv::qt::set_property(m_mpv, "drm-video-plane-id", 0);
+#endif
+
   if (vo == "libmpv")
     setQtQuickWindow(window);
 }
